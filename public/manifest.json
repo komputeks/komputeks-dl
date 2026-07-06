@@ -1,0 +1,17 @@
+{
+  "name": "Komputeks Downloads",
+  "short_name": "Komputeks",
+  "description": "Download premium games, mods, apps, and tools. Fast, secure, and always free.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0f",
+  "theme_color": "#0a0a0f",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
