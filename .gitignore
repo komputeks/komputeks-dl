@@ -2,7 +2,7 @@ node_modules/
 .next/
 .env
 .env.local
-*.log
+*.pem
 .DS_Store
 .vercel
-vercel.json
+next-env.d.ts
