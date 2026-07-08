@@ -23,7 +23,14 @@ export default function SignupClient() {
     const { data, error } = await supabase.auth.signUp({ email, password });
     setLoading(false);
     if (error) { setError(error.message); return; }
-    if (data.session) { router.push('/dashboard'); return; }
+    if (data.session) {
+      if (data.session.access_token) {
+        document.cookie = `sb-access-token=${data.session.access_token}; path=/; max-age=${data.session.expires_in}; SameSite=Lax; Secure`;
+      }
+      router.push('/dashboard');
+      router.refresh();
+      return;
+    }
     setSuccess(true);
   };
 

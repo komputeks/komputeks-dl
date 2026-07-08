@@ -18,10 +18,15 @@ export default function LoginClient() {
     e.preventDefault();
     setError('');
     setLoading(true);
-    const { error } = await supabase.auth.signInWithPassword({ email, password });
+    const { data, error } = await supabase.auth.signInWithPassword({ email, password });
     setLoading(false);
     if (error) { setError(error.message); return; }
+
+    if (data.session?.access_token) {
+      document.cookie = `sb-access-token=${data.session.access_token}; path=/; max-age=${data.session.expires_in}; SameSite=Lax; Secure`;
+    }
     router.push('/dashboard');
+    router.refresh();
   };
 
   return (
