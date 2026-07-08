@@ -63,6 +63,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li><Link href="/downloads" className="text-muted hover:text-neon transition-colors">All Downloads</Link></li>
               <li><Link href="/categories" className="text-muted hover:text-neon transition-colors">Categories</Link></li>
+              <li><Link href="/docs" className="text-muted hover:text-neon transition-colors">Documentation</Link></li>
               <li><Link href="/about" className="text-muted hover:text-neon transition-colors">About Us</Link></li>
               <li><Link href="/faq" className="text-muted hover:text-neon transition-colors">FAQ</Link></li>
               <li><Link href="/contact" className="text-muted hover:text-neon transition-colors">Contact</Link></li>
